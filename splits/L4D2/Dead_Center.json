@@ -1,0 +1,19 @@
+{
+  "title": "Dead Center",
+  "splits": [
+    {
+      "title": "Hotel"
+    },
+    {
+      "title": "Streets"
+    },
+    {
+      "title": "Mall"
+    },
+    {
+      "title": "Atrium"
+    }
+  ],
+  "width": 300,
+  "height": 400
+}
