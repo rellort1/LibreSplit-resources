@@ -235,7 +235,7 @@ function start()
 end
 
 function reset()
-    if current.gameTime < old.gameTime then
+    if old.gameTime == 0 then
         return true
     end
     return false
