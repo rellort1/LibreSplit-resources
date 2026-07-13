@@ -1,0 +1,26 @@
+{
+  "title": "Celeste 5C",
+  "attempt_count": 0,
+  "splits": [
+    {
+      "title": "Room 1",
+      "time": "0.000000",
+      "best_time": "0.000000",
+      "best_segment": "0.000000"
+    },
+    {
+      "title": "Room 2",
+      "time": "0.000000",
+      "best_time": "0.000000",
+      "best_segment": "0.000000"
+    },
+    {
+      "title": "Room 3",
+      "time": "0.000000",
+      "best_time": "0.000000",
+      "best_segment": "0.000000"
+    }
+  ],
+  "width": 60,
+  "height": 80
+}
