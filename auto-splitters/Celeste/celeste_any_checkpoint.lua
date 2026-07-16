@@ -8,8 +8,8 @@ local checkpointIndex = 1
 
 -- Set the b sides you do to true
 local bSides = {
-    templeB = true,
-    reflectionB = true
+    templeB = false,
+    reflectionB = false,
 }
 
 local current = {
@@ -31,8 +31,8 @@ local old = {
     levelTime = 0,
 }
 
-local Chapters = { "prologue", "forsakenCity", "oldSite", "celestialResort", "goldenRidge", "temple", "reflection",
-    "summit", }
+local Chapters =
+{ "prologue", "forsakenCity", "oldSite", "celestialResort", "goldenRidge", "temple", "reflection", "summit" }
 
 local route = {
     prologue = { "Clear" },
@@ -42,7 +42,7 @@ local route = {
     goldenRidge = { "b-00", "c-00", "d-00", "Clear" },
     temple = {},
     reflection = {},
-    summit = { "b-00", "c-00", "d-00", "e-00b", "f-00", "g-00", "Clear" }
+    summit = { "b-00", "c-00", "d-00", "e-00b", "f-00", "g-00", "Clear" },
 }
 
 local templeA = { "b-00", "c-00", "d-00", "e-00", "Clear" }

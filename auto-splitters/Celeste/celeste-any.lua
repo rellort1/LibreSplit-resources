@@ -8,8 +8,8 @@ local splitDelay = false
 
 -- Set the b sides you do to true
 local bSides = {
-    templeB = true,
-    ReflectionB = false,
+    templeB = false,
+    reflectionB = false,
 }
 
 local current = {
@@ -32,8 +32,8 @@ local old = {
     levelTime = 0,
 }
 
-local Chapters = { "prologue", "forsakenCity", "oldSite", "celestialResort", "goldenRidge", "temple", "reflection",
-    "summit", }
+local Chapters =
+{ "prologue", "forsakenCity", "oldSite", "celestialResort", "goldenRidge", "temple", "reflection", "summit" }
 
 local route = {
     prologue = { "Clear" },
@@ -43,7 +43,7 @@ local route = {
     goldenRidge = { "Clear" },
     temple = {},
     reflection = {},
-    summit = { "Clear" }
+    summit = { "Clear" },
 }
 local templeA = { "Clear" }
 local templeB = { "Enter", "Clear" }

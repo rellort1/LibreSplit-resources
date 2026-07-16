@@ -1,5 +1,6 @@
 # Celeste Autosplitters
 
 **You will need to run libresplit with `LIBRESPLIT_DISABLE_IOCTL_MAPS=1` or it wont be able to read any addresses**
+Currently the autosplitter cant account for skip/undo/manual splitting, it will always split at the same points in the same order.
 
-for any% splits you can choose which b sides you do with the bSides toggles at the top of the files
+for any% you can choose which b sides you do with the bSides toggles at the top of the autosplitter files
