@@ -226,8 +226,8 @@ function split()
                 checkpointIndex = checkpointIndex + 1
             end
         end
-        return shouldSplit
     end
+    return shouldSplit
 end
 
 function isLoading()
