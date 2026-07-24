@@ -1,6 +1,16 @@
 cmdline("Celeste.bin.x86_64")
 
 local autoSplitterObj = nil
+local _read = readAddress
+local base = 0
+function readAddress(typ, address, ...)
+    if type(address) == "number" and address >= base then
+        return _read(typ, address - base, ...)
+    else
+        return _read(typ, address, ...)
+    end
+end
+
 local current = {
     chapterCompleted = false,
     chapterStarted = false,
@@ -176,6 +186,7 @@ end
 function startup()
     refreshRate = 60
     useGameTime = true
+    base = getBaseAddress()
 end
 
 function state()
@@ -206,7 +217,6 @@ function state()
         current.levelTime = readAddress("long", autoSplitterObj + 0x18) / 10000
         current.levelName = getLevelName(autoSplitterObj)
     end
-    print_tbl(current)
 end
 
 function split()

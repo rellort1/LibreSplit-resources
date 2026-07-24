@@ -1,16 +1,26 @@
 cmdline("Celeste.bin.x86_64")
 
-local autoSplitterObj = nil
-local lastCompleted = false
-local splitIndex = 1
-local checkpointIndex = 1
-local splitDelay = false
-
 -- Set the b sides you do to true
 local bSides = {
     templeB = false,
     reflectionB = false,
 }
+
+local autoSplitterObj = nil
+local _read = readAddress
+local base = 0
+function readAddress(typ, address, ...)
+    if type(address) == "number" and address >= base then
+        return _read(typ, address - base, ...)
+    else
+        return _read(typ, address, ...)
+    end
+end
+
+local lastCompleted = false
+local splitIndex = 1
+local checkpointIndex = 1
+local splitDelay = false
 
 local current = {
     chapterCompleted = false,
@@ -146,6 +156,7 @@ end
 function startup()
     refreshRate = 60
     useGameTime = true
+    base = getBaseAddress()
 end
 
 function state()
